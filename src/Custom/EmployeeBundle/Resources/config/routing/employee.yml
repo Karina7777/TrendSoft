@@ -1,0 +1,35 @@
+employee:
+    path:     /
+    defaults: { _controller: "CustomEmployeeBundle:Employee:index" }
+
+employee_show:
+    path:     /{id}/show
+    defaults: { _controller: "CustomEmployeeBundle:Employee:show" }
+
+employee_new:
+    path:     /new
+    defaults: { _controller: "CustomEmployeeBundle:Employee:new" }
+
+employee_create:
+    path:     /create
+    defaults: { _controller: "CustomEmployeeBundle:Employee:create" }
+    methods:  POST
+
+employee_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CustomEmployeeBundle:Employee:edit" }
+
+employee_update:
+    path:     /{id}/update
+    defaults: { _controller: "CustomEmployeeBundle:Employee:update" }
+    methods:  [POST, PUT]
+
+employee_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CustomEmployeeBundle:Employee:delete" }
+    methods:  [POST, DELETE]
+
+employee_search:
+  path:     /search/{last_name}
+  defaults: { _controller: "CustomEmployeeBundle:Employee:search" }
+  methods: [GET]
